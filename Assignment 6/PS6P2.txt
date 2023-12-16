@@ -1,7 +1,0 @@
-(start) = int(input("Enter Starting value "))
-stop = int(input("Enter stop value "))
-inc = int(input("Enter increment value "))
-
-while start <= stop:
-  print(start)
-  start = start + inc
