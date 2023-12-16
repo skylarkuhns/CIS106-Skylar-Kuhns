@@ -1,0 +1,11 @@
+#inputphase
+fixedcosts = float(input("Enter fixed costs "))
+priceperunit = float(input("Enter price per unit "))
+costperunit = float(input("Enter cost per unit "))
+
+#processphase
+difference = priceperunit - costperunit
+breakeven = fixedcosts/difference
+
+#outputphase
+print("You need to sell",round(breakeven),"items in order to break even")

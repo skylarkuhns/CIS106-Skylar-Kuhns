@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Skyla"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-06 04:18:05 PM"/>
+        <attribute name="created" value="U2t5bGE7U0tZTEFSOzIwMjMtMTEtMDY7MDQ6MDY6MjggUE07MjI2NQ=="/>
+        <attribute name="edited" value="U2t5bGE7U0tZTEFSOzIwMjMtMTEtMDY7MDQ6MTg6MDUgUE07MTsyMzcx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="fixedcosts" type="Real" array="False" size=""/>
+            <declare name="priceperunit" type="Real" array="False" size=""/>
+            <declare name="costperunit" type="Real" array="False" size=""/>
+            <declare name="breakeven" type="Real" array="False" size=""/>
+            <declare name="difference" type="Real" array="False" size=""/>
+            <input variable="fixedcosts"/>
+            <input variable="priceperunit"/>
+            <input variable="costperunit"/>
+            <assign variable="difference" expression="priceperunit - costperunit"/>
+            <assign variable="breakeven" expression="fixedcosts/difference"/>
+            <output expression="&quot;The amount of items needed to sell to break even is &quot;&amp;breakeven" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

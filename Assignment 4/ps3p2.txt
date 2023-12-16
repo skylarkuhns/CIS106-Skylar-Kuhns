@@ -1,0 +1,10 @@
+#inputphase
+pricepershare = float(input("Enter the price per share "))
+stockprice = float(input("Enter the current stock price "))
+stockquantity = int(input("Enter the stock quantity "))
+
+#processphase
+stockvalue = (stockprice - pricepershare) * stockquantity
+
+#outputphase
+print("The total stock value is $",round(stockvalue,2))

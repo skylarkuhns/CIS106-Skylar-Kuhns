@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Skyla"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-06 03:39:45 PM"/>
+        <attribute name="created" value="U2t5bGE7U0tZTEFSOzIwMjMtMTEtMDY7MDM6Mjc6MDIgUE07MjI1OQ=="/>
+        <attribute name="edited" value="U2t5bGE7U0tZTEFSOzIwMjMtMTEtMDY7MDM6Mzk6NDUgUE07MTsyMzc3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="pricepershare" type="Real" array="False" size=""/>
+            <declare name="stockprice" type="Real" array="False" size=""/>
+            <declare name="stockquantity" type="Real" array="False" size=""/>
+            <declare name="stockvalue" type="Real" array="False" size=""/>
+            <input variable="pricepershare"/>
+            <input variable="stockprice"/>
+            <input variable="stockquantity"/>
+            <assign variable="stockvalue" expression="(stockprice - pricepershare) * stockquantity"/>
+            <output expression="&quot;The total stock value is &quot;&amp;stockvalue" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
