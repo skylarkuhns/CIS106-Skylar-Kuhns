@@ -1,0 +1,12 @@
+name = input("Enter appliance name: ")
+apcost = float(input("Enter appliance cost: "))
+
+wnty = 0.05 if (apcost) > 1000 else 0.1
+
+wcost = apcost * wnty
+total = apcost + wcost
+
+print (name)
+print ("Cost of appliance: $",apcost)
+print ("Warrantee cost: $",wcost)
+print (f"Total cost: ${total:.2f}")

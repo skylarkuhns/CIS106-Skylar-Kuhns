@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Skyla"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-12-16 02:16:15 AM"/>
+        <attribute name="created" value="U2t5bGE7U0tZTEFSOzIwMjMtMTItMTY7MDI6MDI6MDUgQU07MjI0MQ=="/>
+        <attribute name="edited" value="U2t5bGE7U0tZTEFSOzIwMjMtMTItMTY7MDI6MTY6MTUgQU07MTsyMzU1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="agi" type="Real" array="False" size=""/>
+            <declare name="rate" type="Real" array="False" size=""/>
+            <declare name="itax" type="Real" array="False" size=""/>
+            <declare name="grossinc" type="Real" array="False" size=""/>
+            <declare name="numdep" type="Integer" array="False" size=""/>
+            <declare name="lname" type="String" array="False" size=""/>
+            <input variable="lname"/>
+            <input variable="numdep"/>
+            <input variable="grossinc"/>
+            <assign variable="agi" expression="grossinc - (numdep * 12000)"/>
+            <if expression="agi &gt; 50000">
+                <then>
+                    <assign variable="rate" expression="0.20"/>
+                </then>
+                <else>
+                    <assign variable="rate" expression="0.10"/>
+                </else>
+            </if>
+            <assign variable="itax" expression="agi * rate"/>
+            <if expression="itax &lt; 0">
+                <then>
+                    <assign variable="itax" expression="100"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;Summary for &quot; &amp;lname&amp;&quot;:&quot;" newline="True"/>
+            <output expression="&quot;Gross income: $&quot;&amp;grossinc" newline="True"/>
+            <output expression="&quot;Number of dependents: &quot; &amp;numdep" newline="True"/>
+            <output expression="&quot;Adjusted Gross Income: $&quot; &amp;agi" newline="True"/>
+            <output expression="&quot;Income Tax: $&quot; &amp;itax" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

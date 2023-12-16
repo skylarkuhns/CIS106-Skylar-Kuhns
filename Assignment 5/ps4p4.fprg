@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Skyla"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-12-16 02:01:59 AM"/>
+        <attribute name="created" value="U2t5bGE7U0tZTEFSOzIwMjMtMTItMTY7MDE6MTU6MjUgQU07MjI0Ng=="/>
+        <attribute name="edited" value="U2t5bGE7U0tZTEFSOzIwMjMtMTItMTY7MDI6MDE6NTkgQU07MTsyMzU3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="apcost" type="Real" array="False" size=""/>
+            <declare name="wcost" type="Real" array="False" size=""/>
+            <declare name="wnty" type="Real" array="False" size=""/>
+            <declare name="name" type="String" array="False" size=""/>
+            <declare name="total" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter name of appliance&quot;" newline="True"/>
+            <input variable="name"/>
+            <output expression="&quot;Enter cost of appliance&quot;" newline="True"/>
+            <input variable="apcost"/>
+            <if expression="apcost &gt; 1000">
+                <then>
+                    <assign variable="wnty" expression="0.10"/>
+                </then>
+                <else>
+                    <assign variable="wnty" expression="0.05"/>
+                </else>
+            </if>
+            <assign variable="wcost" expression="apcost * wnty"/>
+            <assign variable="total" expression="apcost + wcost"/>
+            <output expression="&quot;Name of appliance: &quot;&amp;name" newline="True"/>
+            <output expression="&quot;Cost of appliance: $&quot; &amp;apcost" newline="True"/>
+            <output expression="&quot;Warrantee cost: $&quot; &amp;wcost" newline="True"/>
+            <output expression="&quot;Your total is $&quot; &amp;total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

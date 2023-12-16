@@ -1,0 +1,13 @@
+qty = int(input("Enter quantity here "))
+
+up = 3.0 if qty >= 1000 else 5.0
+  
+extprice = qty * up
+tax = extprice * 0.07
+total = extprice + tax
+
+print ("Quantity ordered: ",qty)
+print ("Unit Price: $",up)
+print ("Extended Price: $",extprice)
+print (f"Tax: ${tax:.2f}")
+print (f"Total: ${total:.2f}")

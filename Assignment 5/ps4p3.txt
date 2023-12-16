@@ -1,0 +1,13 @@
+bookqty = int(input("Enter Book Quantity: "))
+bcost = float(input("Enter Book Cost: "))
+
+ordtotal = bcost * bookqty
+
+shipping = 25.0 if ordtotal > 50 else 0.0
+  
+print (f"Your total is: ${ordtotal:.2f}")  
+print ("Your shipping cost is $",shipping)
+
+shiptotal = shipping + ordtotal
+
+print (f"Total cost with shipping: ${shiptotal:.2f}")

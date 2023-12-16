@@ -1,0 +1,14 @@
+lname = input("Enter last name ")
+grossinc = input("Enter gross income ")
+numdep = input("Enter number of dependents ")
+
+agi = float(grossinc) - 120000.00 * float(numdep)
+
+tax = agi * 0.20 if agi > 50000.00 else agi * 0.10
+tax = 100.00 if tax < 0 else tax
+
+print (lname)
+print ("Gross Income:  $",grossinc)
+print ("Number of dependents:  ", numdep)
+print ("Adjusted Gross:  $",agi)
+print ("Income Tax:  $",tax)

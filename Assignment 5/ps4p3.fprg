@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Skyla"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-12-16 01:15:19 AM"/>
+        <attribute name="created" value="U2t5bGE7U0tZTEFSOzIwMjMtMTItMTY7MTI6NTY6MTggQU07MjI1NQ=="/>
+        <attribute name="edited" value="U2t5bGE7U0tZTEFSOzIwMjMtMTItMTY7MDE6MTU6MTkgQU07MTsyMzU3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="bookqty" type="Integer" array="False" size=""/>
+            <declare name="bookcost" type="Real" array="False" size=""/>
+            <declare name="ordtotal" type="Real" array="False" size=""/>
+            <declare name="shipping" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <declare name="shiptotal" type="Real" array="False" size=""/>
+            <input variable="bookqty"/>
+            <input variable="bookcost"/>
+            <assign variable="ordtotal" expression="bookqty * bookcost"/>
+            <if expression="ordtotal &gt; 50">
+                <then>
+                    <assign variable="shipping" expression="0.00"/>
+                </then>
+                <else>
+                    <assign variable="shipping" expression="25.00"/>
+                </else>
+            </if>
+            <output expression="&quot;Your total is $&quot; &amp;ordtotal" newline="True"/>
+            <output expression="&quot;Your shipping charge is $&quot; &amp;shipping" newline="True"/>
+            <assign variable="shiptotal" expression="shipping + ordtotal"/>
+            <output expression="&quot;Your total cost with shipping is $&quot; &amp;shiptotal" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
