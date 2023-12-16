@@ -1,0 +1,11 @@
+#inputphase
+exam1score = float(input("Enter exam 1 score "))
+exam2score = float(input("Enter exam 2 score "))
+
+#processphase
+exam1weightscore = (exam1score * 0.60)
+exam2weightscore = (exam2score * 0.40)
+totalscore = (exam1weightscore + exam2weightscore)
+
+#outputphase
+print("Your total grade is",totalscore)

@@ -1,0 +1,20 @@
+sumgrosspay = 0.0
+noofemployees = 0
+grosspay = 0
+
+response = input("Would you like to do this program? (yes or no) ")
+while response == "yes":
+ lname = input("Enter employee last name ")
+ hours = float(input("Enter hours worked "))
+ rate = float(input("Enter hourly rate "))
+ grosspay = (40 * rate) + (hours - 40) * 1.5 * rate if hours >= 40 else rate * hours
+ print ("Gross Pay = $",grosspay)
+ sumgrosspay = sumgrosspay + grosspay
+ noofemployees = noofemployees + 1
+ response = input("Would you like to repeat this program? (Yes or No) ")
+
+avggrosspay = sumgrosspay / noofemployees
+
+print ("The sum of all gross pay is $",sumgrosspay)
+print ("The total number of employees entered is",noofemployees)
+print (f"The average gross pay is ${avggrosspay:.2f}")
