@@ -1,0 +1,18 @@
+qty = int(input("Enter quantity to purchase "))
+
+if qty > 10000:
+  price = 10.00
+elif qty <= 10000 and qty >= 5000:
+  price = 20.00
+else:
+  price = 30.00
+
+extprice = float(qty) * price
+tax = 0.07
+taxamt = float(extprice) * tax
+total = float(extprice) + taxamt
+
+print ("The price per unit is     ", price)
+print ("The extended price is     ", extprice)
+print ("The tax amount is         ", taxamt)
+print ("Total:                    ", total)
