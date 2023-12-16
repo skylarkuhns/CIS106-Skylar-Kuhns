@@ -1,0 +1,17 @@
+principle = float(input("Enter the principle amount: "))
+
+if principle > 100000:
+  myears = float(input("Enter years to maturity "))
+  interest = 0.06 if myears == 5 else 0.02
+elif principle <= 100000 and principle >= 50000:
+  myears = float(input("Enter years to maturity "))
+  interest = 0.05 if myears == 10 else 0.04 if myears == 5 else 0.02
+else:
+  interest = 0.02
+  
+intamt = float(principle) * interest
+
+print ("The principle amount is: ", principle)
+print ("The interest rate is ", interest)
+print (f"The interest amount for the first year is ${intamt:.2f}")
+  
