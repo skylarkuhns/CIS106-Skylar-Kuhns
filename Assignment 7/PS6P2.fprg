@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Skyla"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-12-15 05:27:01 PM"/>
+        <attribute name="created" value="U2t5bGE7U0tZTEFSOzIwMjMtMTItMTU7MDM6NDQ6MzAgUE07MjI2MA=="/>
+        <attribute name="edited" value="U2t5bGE7U0tZTEFSOzIwMjMtMTItMTU7MDU6Mjc6MDEgUE07MzsyMzcx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="response" type="String" array="False" size=""/>
+            <declare name="start" type="Integer" array="False" size=""/>
+            <declare name="stop" type="Integer" array="False" size=""/>
+            <declare name="increment" type="Integer" array="False" size=""/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter start value&quot;" newline="True"/>
+            <input variable="start"/>
+            <output expression="&quot;Enter stop value&quot;" newline="True"/>
+            <input variable="stop"/>
+            <output expression="&quot;Enter increment value&quot;" newline="True"/>
+            <input variable="increment"/>
+            <assign variable="count" expression="start"/>
+            <output expression="&quot;Start the count? (Yes or No)&quot;" newline="True"/>
+            <input variable="response"/>
+            <while expression="response == &quot;yes&quot;">
+                <if expression="count &lt;= stop">
+                    <then>
+                        <output expression="&quot;&quot; &amp;count" newline="True"/>
+                        <assign variable="count" expression="count + increment"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;Would you like to try another count? (Yes or No)&quot;" newline="True"/>
+                        <input variable="response"/>
+                        <if expression="response == &quot;yes&quot;">
+                            <then>
+                                <output expression="&quot;Enter start value&quot;" newline="True"/>
+                                <input variable="start"/>
+                                <output expression="&quot;Enter stop value&quot;" newline="True"/>
+                                <input variable="stop"/>
+                                <output expression="&quot;Enter increment value&quot;" newline="True"/>
+                                <input variable="increment"/>
+                                <assign variable="count" expression="start"/>
+                            </then>
+                            <else>
+                                <assign variable="response" expression="&quot;no&quot;"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
