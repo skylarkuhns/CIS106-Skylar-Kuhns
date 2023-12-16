@@ -1,0 +1,11 @@
+#input phase
+stocktickersymbol = input("Enter Stock Ticker Symbol ")
+sharenumber = input("Enter Share Number ")
+sharecost = input("Enter Share Cost ($USD) ")
+
+#process phase
+shareamount = int(sharenumber) * int(sharecost)
+
+#output phase
+print("Stock Ticker Symbol:", stocktickersymbol)
+print("The total amount invested is $",shareamount)

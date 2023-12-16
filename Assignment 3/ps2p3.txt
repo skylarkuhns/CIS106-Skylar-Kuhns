@@ -1,0 +1,9 @@
+#inputphase
+realamount = float(input("How much money was made "))
+amountofpeople = int(input("How many people worked the job "))
+
+#process phase
+distributedamount = int(realamount)/int(amountofpeople)
+
+#output phase
+print("Each person should receive $",int(distributedamount))
