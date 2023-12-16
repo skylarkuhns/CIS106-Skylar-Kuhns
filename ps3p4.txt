@@ -1,9 +1,0 @@
-#inputphase
-firstname = input("Enter first name here ")
-steps = int(input("Enter amount of steps "))
-
-#processphase
-caloriesburned = (steps * 0.25)
-
-#outputphase
-print("Hooray!",firstname,"burned",round(caloriesburned,2), "Calories today!")
