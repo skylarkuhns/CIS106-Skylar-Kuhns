@@ -1,0 +1,24 @@
+nooforders = 0
+sumofdiscamt = 0
+extprice = 0
+discamt = 0
+totalorder =0
+
+response = input("Do you want to calculate total order with discount? (Yes or No) ")
+while response == "yes":
+  quantity = float(input("Enter quantity: "))
+  price = float(input("Enter price: "))
+  extprice = quantity * price
+  discamt = extprice * 0.25 if extprice > 10000 else extprice * 0.10
+  totalorder = extprice - discamt
+  sumofdiscamt = sumofdiscamt + discamt
+  nooforders = nooforders + 1
+  print (f"The extended price is ${extprice:.2f}")
+  print (f"Discount earned: ${discamt:.2f}")
+  print (f"Total order: ${totalorder:.2f}")
+  response = input("Do you want to enter another order? (Yes or No) ")
+
+print (f"Total Discounts Given: ${sumofdiscamt:.2f}")
+print ("Number of orders entered: ",nooforders)
+avgdiscamt = sumofdiscamt/nooforders
+print (f"The average discount given is ${avgdiscamt:.2f}")
